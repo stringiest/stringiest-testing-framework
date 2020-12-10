@@ -23,12 +23,24 @@ Firstly, you will need to clone the repo:
 ```sh
 $ git clone git@github.com:stringiest/stringiest-testing-framework.git
 ```
-Copy the file 'testingFramework.js' into your project folder.
+Copy the files `testingFramework.js` & `testRunner.html` into your project folder.
 
-Create an html file in the same format as 'testRunner.html', inserting the file names for your source code where indicated.
+Insert the file names for your source code into `testRunner.html` where indicated.
 
-Write your tests in a separate js file, and add the file name for this to the html file that you've just created.
+Write your tests in a separate js file, and add the file name for this into `testRunner.html` where indicated.
 
-To run the tests, navigate to your html file in Chrome.  The results of your tests will appear in the console.  To access this in Chrome, go to 'View', 'Developer', 'Javascript Console'.
+To run the tests, navigate to your `testRunner.html` file in Chrome.  The results of your tests will appear in the console.  To access the console in Chrome, go to 'View', 'Developer', 'Javascript Console'.
 
 ## What commands should I use to define my tests?  
+Tests should be drafted in the format:
+```js
+it('description of test', function() {
+  expect('code to be tested').toEqual('expected output');
+})
+```
+Available matchers:
+* `toEqual`
+* `toBeAnArray`
+* `isTrue`
+
+You can also see sample tests in `sample_tests.js`

@@ -11,18 +11,18 @@ function expect(actual) {
       }
     },  // note use of comma to separate functions
 
-    toTripleEqual: function(expected) {
-      // compare 'actual' and 'expected' strictly
-      if (actual === expected) {
+    toBeAnArray: function() {
+      // checks if 'actual' is an array
+      if (actual.constructor.name === "Array") {
         console.log("Pass");
       } else {
         console.log("Fail");
       }
     },
 
-    toBeAnArray: function() {
-      // checks if 'actual' is an array
-      if (actual.constructor.name === "Array") {
+    isTrue: function() {
+      // compare 'actual' and 'expected'
+      if (actual === true) {
         console.log("Pass");
       } else {
         console.log("Fail");
